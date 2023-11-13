@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import "@/assets/css/bootstrap.min.css";
-import "@/assets/css/style.css";
-import "@/assets/css/tiny-slider.css";
+definePageMeta({
+  layout:'dashboard'
+})
 const route = useRoute()
 </script>
 
@@ -517,3 +517,8 @@ const route = useRoute()
 </footer>
 <!-- End Footer Section -->	
 </template>
+<style scoped>
+@import url("@/assets/css/bootstrap.min.css");
+@import url("@/assets/css/style.css");
+@import url("@/assets/css/tiny-slider.css");
+</style>
