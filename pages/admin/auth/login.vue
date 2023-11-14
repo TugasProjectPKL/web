@@ -33,10 +33,10 @@ const isPasswordVisible = ref(false);
 
         <VCardText class="pt-2">
           <h5 class="text-h5 font-weight-semibold mb-1">
-            Welcome to Materio! 👋🏻
+            login page ! 👋🏻
           </h5>
           <p class="mb-0">
-            Please sign-in to your account and start the adventure
+            selamat belanja!
           </p>
         </VCardText>
 
@@ -66,7 +66,7 @@ const isPasswordVisible = ref(false);
                 <div
                   class="d-flex align-center justify-space-between flex-wrap mt-1 mb-4"
                 >
-                  <VCheckbox v-model="form.remember" label="Remember me" />
+                  
 
                   <a class="ms-2 mb-1" href="javascript:void(0)">
                     Forgot Password?
