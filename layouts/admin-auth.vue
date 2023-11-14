@@ -1,7 +1,7 @@
 <template>
     <div class="layout-wrapper layout-blank">
-        <p>sasa</p>
-      <slot/>
+        <p>Rere</p>
+      <slot></slot>
     </div>
   </template>
   
