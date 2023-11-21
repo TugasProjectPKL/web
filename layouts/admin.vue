@@ -1,5 +1,5 @@
 <template>
     <v-app>
-        <slov/>
+        <slot/>
     </v-app>
 </template>
