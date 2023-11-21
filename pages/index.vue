@@ -10,7 +10,7 @@ const route = useRoute()
   <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
 <div class="container">
-  <a class="navbar-brand" href="index.html">Furni<span>.</span></a>
+  <a class="navbar-brand" href="index.html">PT. Starindo Multi Industri<span>.</span></a>
 
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -22,10 +22,8 @@ const route = useRoute()
         <a class="nav-link" href="index.html">Home</a>
       </li>
       <li><a class="nav-link" href="shop.html">Shop</a></li>
+      <li><a class="nav-link" href="shop.html">Customer Service</a></li>
       <li><a class="nav-link" href="about.html">About us</a></li>
-      <li><a class="nav-link" href="services.html">Services</a></li>
-      <li><a class="nav-link" href="blog.html">Blog</a></li>
-      <li><a class="nav-link" href="contact.html">Contact us</a></li>
     </ul>
 
     <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
@@ -44,14 +42,14 @@ const route = useRoute()
     <div class="row justify-content-between">
       <div class="col-lg-5">
         <div class="intro-excerpt">
-          <h1>Modern Interior <span clsas="d-block">Design Studio</span></h1>
-          <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
+          <h1>Modern Tape Industri Packaging</H1>
+          <p class="mb-4">Pita perekat yang kami produksi memiliki kualitas yang bagus, tebal, kuat, dan di jamin menempel! Di Starindo, kami percaya pada produk berkualitas tinggi namun hemat biaya,dan hanya memilih untuk memasang merek kami pada produk yang memenuhi standar pengembangan yang ketat. </p>
           <p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
         </div>
       </div>
       <div class="col-lg-7">
         <div class="hero-img-wrap">
-          <img src="@/assets/images/couch.png" class="img-fluid">
+          <img src="@/assets/images/bg1.png" class="img-fluid" style="width: 100%; height: auto; object-fit: cover;">
         </div>
       </div>
     </div>
@@ -67,7 +65,7 @@ const route = useRoute()
     <!-- Start Column 1 -->
     <div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
       <h2 class="mb-4 section-title">Crafted with excellent material.</h2>
-      <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. </p>
+      <p class="mb-4">Produk best seller kami memukau pelanggan dengan desain inovatif, kualitas premium, dan tampilan yang memikat. </p>
       <p><a href="shop.html" class="btn">Explore</a></p>
     </div> 
     <!-- End Column 1 -->
@@ -75,9 +73,9 @@ const route = useRoute()
     <!-- Start Column 2 -->
     <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
       <a class="product-item" href="cart.html">
-        <img src="@/assets/images/product-1.png" class="img-fluid product-thumbnail">
-        <h3 class="product-title">Nordic Chair</h3>
-        <strong class="product-price">$50.00</strong>
+        <img src="@/assets/images/opptape.png" class="img-fluid product-thumbnail">
+        <h3 class="product-title">Opp Tape</h3>
+        <strong class="product-price">Rp 250.000/Dus</strong>
 
         <span class="icon-cross">
           <img src="@/assets/images/cross.svg" class="img-fluid">
@@ -89,9 +87,9 @@ const route = useRoute()
     <!-- Start Column 3 -->
     <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
       <a class="product-item" href="cart.html">
-        <img src="@/assets/images/product-2.png" class="img-fluid product-thumbnail">
-        <h3 class="product-title">Kruzo Aero Chair</h3>
-        <strong class="product-price">$78.00</strong>
+        <img src="@/assets/images/krafttape.png" class="img-fluid product-thumbnail">
+        <h3 class="product-title">Kraft tape</h3>
+        <strong class="product-price">Rp 310.000/Dus</strong>
 
         <span class="icon-cross">
           <img src="@/assets/images/cross.svg" class="img-fluid">
@@ -103,9 +101,9 @@ const route = useRoute()
     <!-- Start Column 4 -->
     <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
       <a class="product-item" href="cart.html">
-        <img src="@/assets/images/product-3.png" class="img-fluid product-thumbnail">
-        <h3 class="product-title">Ergonomic Chair</h3>
-        <strong class="product-price">$43.00</strong>
+        <img src="@/assets/images/clothtape.png" class="img-fluid product-thumbnail">
+        <h3 class="product-title">Cloth tape</h3>
+        <strong class="product-price">Rp 365.000/Dus</strong>
 
         <span class="icon-cross">
           <img src="@/assets/images/cross.svg" class="img-fluid">
@@ -125,7 +123,7 @@ const route = useRoute()
   <div class="row justify-content-between">
     <div class="col-lg-6">
       <h2 class="section-title">Why Choose Us</h2>
-      <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
+      <p>Kami menjaga kualitas dan berbagai aspek agar consument puas pada product kami.</p>
 
       <div class="row my-5">
         <div class="col-6 col-md-6">
@@ -134,7 +132,7 @@ const route = useRoute()
               <img src="@/assets/images/truck.svg" alt="Image" class="imf-fluid">
             </div>
             <h3>Fast &amp; Free Shipping</h3>
-            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+            <p>Kami memastikan pesanan anda sampai tepat waktu .</p>
           </div>
         </div>
 
@@ -144,7 +142,7 @@ const route = useRoute()
               <img src="@/assets/images/bag.svg" alt="Image" class="imf-fluid">
             </div>
             <h3>Easy to Shop</h3>
-            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+            <p>Kami membuat produk kami mudah untuk didapatkan dan bisa dipesan kapanpun dan dimanapun. </p>
           </div>
         </div>
 
@@ -154,7 +152,7 @@ const route = useRoute()
               <img src="@/assets/images/support.svg" alt="Image" class="imf-fluid">
             </div>
             <h3>24/7 Support</h3>
-            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+            <p>Kami menggunakan mesin dan bahan dengan kualitas terbaik untuk menjamin kualitas produk dan kepuasan pelanggan.</p>
           </div>
         </div>
 
@@ -164,7 +162,7 @@ const route = useRoute()
               <img src="@/assets/images/return.svg" alt="Image" class="imf-fluid">
             </div>
             <h3>Hassle Free Returns</h3>
-            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+            <p>Jika ada hal yang belum jelas baik untuk masalah produk, pembelian, ataupun bisnis, konsultasikan apa yang belum anda pahami kepada kami. Tim kami siap membantu anda.</p>
           </div>
         </div>
 
@@ -173,7 +171,7 @@ const route = useRoute()
 
     <div class="col-lg-5">
       <div class="img-wrap">
-        <img src="@/assets/images/why-choose-us-img.jpg" alt="Image" class="img-fluid">
+        <img src="@/assets/images/image1.jpg" alt="Image" class="img-fluid">
       </div>
     </div>
 
@@ -188,20 +186,21 @@ const route = useRoute()
   <div class="row justify-content-between">
     <div class="col-lg-7 mb-5 mb-lg-0">
       <div class="imgs-grid">
-        <div class="grid grid-1"><img src="@/assets/images/img-grid-1.jpg" alt="Untree.co"></div>
-        <div class="grid grid-2"><img src="@/assets/images/img-grid-2.jpg" alt="Untree.co"></div>
-        <div class="grid grid-3"><img src="@/assets/images/img-grid-3.jpg" alt="Untree.co"></div>
+        <div class="grid grid-1"><img src="@/assets/images/image3.jpg" alt="Untree.co"></div>
+        <div class="grid grid-2"><img src="@/assets/images/image2.webp" alt="Untree.co"></div>
+        <div class="grid grid-3"><img src="@/assets/images/image4.jpg" alt="Untree.co"></div>
+        
       </div>
     </div>
     <div class="col-lg-5 ps-lg-5">
-      <h2 class="section-title mb-4">We Help You Make Modern Interior Design</h2>
-      <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
+      <h2 class="section-title mb-4">We Help You to Product Quality duct tape</h2>
+      <p>Dengan pengalaman lebih dari 30 tahun yang kami miliki di industri pengemasan, kami berhasil menciptakan budaya manufaktur yang inovatif, sehingga memungkingkan kami untuk mencapai efisiensi terbesar yang mendorong keunggulan kompetitif kami.</p>
 
       <ul class="list-unstyled custom-list my-4">
-        <li>Donec vitae odio quis nisl dapibus malesuada</li>
-        <li>Donec vitae odio quis nisl dapibus malesuada</li>
-        <li>Donec vitae odio quis nisl dapibus malesuada</li>
-        <li>Donec vitae odio quis nisl dapibus malesuada</li>
+        <li>Cara Pesan Mudah</li>
+        <li>Pesanan Datang Tepat Waktu</li>
+        <li>Kualitas Product Terjamin</li>
+        <li>Harga Best Seller</li>
       </ul>
       <p><a herf="#" class="btn">Explore</a></p>
     </div>
@@ -210,214 +209,13 @@ const route = useRoute()
 </div>
 <!-- End We Help Section -->
 
-<!-- Start Popular Product -->
-<div class="popular-product">
-<div class="container">
-  <div class="row">
-
-    <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-      <div class="product-item-sm d-flex">
-        <div class="thumbnail">
-          <img src="@/assets/images/product-1.png" alt="Image" class="img-fluid">
-        </div>
-        <div class="pt-3">
-          <h3>Nordic Chair</h3>
-          <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
-          <p><a href="#">Read More</a></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-      <div class="product-item-sm d-flex">
-        <div class="thumbnail">
-          <img src="@/assets/images/product-2.png" alt="Image" class="img-fluid">
-        </div>
-        <div class="pt-3">
-          <h3>Kruzo Aero Chair</h3>
-          <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
-          <p><a href="#">Read More</a></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-      <div class="product-item-sm d-flex">
-        <div class="thumbnail">
-          <img src="@/assets/images/product-3.png" alt="Image" class="img-fluid">
-        </div>
-        <div class="pt-3">
-          <h3>Ergonomic Chair</h3>
-          <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
-          <p><a href="#">Read More</a></p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-</div>
-<!-- End Popular Product -->
-
-<!-- Start Testimonial Slider -->
-<div class="testimonial-section">
-<div class="container">
-  <div class="row">
-    <div class="col-lg-7 mx-auto text-center">
-      <h2 class="section-title">Testimonials</h2>
-    </div>
-  </div>
-
-  <div class="row justify-content-center">
-    <div class="col-lg-12">
-      <div class="testimonial-slider-wrap text-center">
-
-        <div id="testimonial-nav">
-          <span class="prev" data-controls="prev"><span class="fa fa-chevron-left"></span></span>
-          <span class="next" data-controls="next"><span class="fa fa-chevron-right"></span></span>
-        </div>
-
-        <div class="testimonial-slider">
-          
-          <div class="item">
-            <div class="row justify-content-center">
-              <div class="col-lg-8 mx-auto">
-
-                <div class="testimonial-block text-center">
-                  <blockquote class="mb-5">
-                    <p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
-                  </blockquote>
-
-                  <div class="author-info">
-                    <div class="author-pic">
-                      <img src="@/assets/images/person-1.png" alt="Maria Jones" class="img-fluid">
-                    </div>
-                    <h3 class="font-weight-bold">Maria Jones</h3>
-                    <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div> 
-          <!-- END item -->
-
-          <div class="item">
-            <div class="row justify-content-center">
-              <div class="col-lg-8 mx-auto">
-
-                <div class="testimonial-block text-center">
-                  <blockquote class="mb-5">
-                    <p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
-                  </blockquote>
-
-                  <div class="author-info">
-                    <div class="author-pic">
-                      <img src="@/assets/images/person-1.png" alt="Maria Jones" class="img-fluid">
-                    </div>
-                    <h3 class="font-weight-bold">Maria Jones</h3>
-                    <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div> 
-          <!-- END item -->
-
-          <div class="item">
-            <div class="row justify-content-center">
-              <div class="col-lg-8 mx-auto">
-
-                <div class="testimonial-block text-center">
-                  <blockquote class="mb-5">
-                    <p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
-                  </blockquote>
-
-                  <div class="author-info">
-                    <div class="author-pic">
-                      <img src="@/assets/images/person-1.png" alt="Maria Jones" class="img-fluid">
-                    </div>
-                    <h3 class="font-weight-bold">Maria Jones</h3>
-                    <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div> 
-          <!-- END item -->
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<!-- End Testimonial Slider -->
-
-<!-- Start Blog Section -->
-<div class="blog-section">
-<div class="container">
-  <div class="row mb-5">
-    <div class="col-md-6">
-      <h2 class="section-title">Recent Blog</h2>
-    </div>
-    <div class="col-md-6 text-start text-md-end">
-      <a href="#" class="more">View All Posts</a>
-    </div>
-  </div>
-
-  <div class="row">
-
-    <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-      <div class="post-entry">
-        <a href="#" class="post-thumbnail"><img src="@/assets/images/post-1.jpg" alt="Image" class="img-fluid"></a>
-        <div class="post-content-entry">
-          <h3><a href="#">First Time Home Owner Ideas</a></h3>
-          <div class="meta">
-            <span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 19, 2021</a></span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-      <div class="post-entry">
-        <a href="#" class="post-thumbnail"><img src="@/assets/images/post-2.jpg" alt="Image" class="img-fluid"></a>
-        <div class="post-content-entry">
-          <h3><a href="#">How To Keep Your Furniture Clean</a></h3>
-          <div class="meta">
-            <span>by <a href="#">Robert Fox</a></span> <span>on <a href="#">Dec 15, 2021</a></span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-      <div class="post-entry">
-        <a href="#" class="post-thumbnail"><img src="@/assets/images/post-3.jpg" alt="Image" class="img-fluid"></a>
-        <div class="post-content-entry">
-          <h3><a href="#">Small Space Furniture Apartment Ideas</a></h3>
-          <div class="meta">
-            <span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 12, 2021</a></span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-</div>
-<!-- End Blog Section -->	
 
 <!-- Start Footer Section -->
 <footer class="footer-section">
 <div class="container relative">
 
   <div class="sofa-img">
-    <img src="@/assets/images/sofa.png" alt="Image" class="img-fluid">
+    <img src="@/assets/images/people.png" alt="Image" class="img-fluid">
   </div>
 
   <div class="row">
@@ -445,8 +243,8 @@ const route = useRoute()
 
   <div class="row g-5 mb-5">
     <div class="col-lg-4">
-      <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Furni<span>.</span></a></div>
-      <p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
+      <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">PT. Starindo Multi Industri<span>.</span></a></div>
+      <p class="mb-4">Pita perekat yang kami produksi memiliki kualitas yang bagus, tebal, kuat, dan di jamin menempel! Di Starindo, kami percaya pada produk berkualitas tinggi namun hemat biaya,dan hanya memilih untuk memasang merek kami pada produk yang memenuhi standar pengembangan yang ketat.</p>
 
       <ul class="list-unstyled custom-social">
         <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
