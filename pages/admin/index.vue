@@ -1,10 +1,10 @@
 <script setup lang="ts">
-definePageMeta({
-    layout:"admin"
-})
 </script>
 <template>
-  <div>
+  <nuxt-layout name="admin">
+    <div>
     <v-btn> Button </v-btn>
   </div>
+  </nuxt-layout>
+
 </template>
