@@ -87,71 +87,51 @@ onMounted(() => {
           </p>
 
           <div class="row my-5">
-            <div class="col-6 col-md-6">
-              <div class="feature">
-                <div class="icon">
-                  <img
-                    src="@/assets/images/truck.svg"
-                    alt="Image"
-                    class="imf-fluid"
-                  />
-                </div>
-                <h3>Fast &amp; Free Shipping</h3>
-                <p>Kami memastikan pesanan anda sampai tepat waktu .</p>
-              </div>
-            </div>
+            <ItemService
+              title="Fast &amp; Free Shipping"
+              description="Kami memastikan pesanan anda sampai tepat waktu ."
+            >
+              <img
+                src="@/assets/images/truck.svg"
+                alt="Image"
+                class="imf-fluid"
+              />
+            </ItemService>
 
-            <div class="col-6 col-md-6">
-              <div class="feature">
-                <div class="icon">
-                  <img
-                    src="@/assets/images/bag.svg"
-                    alt="Image"
-                    class="imf-fluid"
-                  />
-                </div>
-                <h3>Easy to Shop</h3>
-                <p>
-                  Kami membuat produk kami mudah untuk didapatkan dan bisa
-                  dipesan kapanpun dan dimanapun.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-6">
-              <div class="feature">
-                <div class="icon">
-                  <img
-                    src="@/assets/images/support.svg"
-                    alt="Image"
-                    class="imf-fluid"
-                  />
-                </div>
-                <h3>24/7 Support</h3>
-                <p>
-                  Kami menggunakan mesin dan bahan dengan kualitas terbaik untuk
-                  menjamin kualitas produk dan kepuasan pelanggan.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-6">
-              <div class="feature">
-                <div class="icon">
-                  <img
-                    src="@/assets/images/return.svg"
-                    alt="Image"
-                    class="imf-fluid"
-                  />
-                </div>
-                <h3>Hassle Free Returns</h3>
-                <p>
-                  Jika ada hal yang belum jelas baik untuk masalah produk,
+            <ItemService
+              title="Easy to Shop"
+              description="Kami membuat produk kami mudah untuk didapatkan dan bisa
+                  dipesan kapanpun dan dimanapun."
+            >
+              <img
+                src="@/assets/images/bag.svg"
+                alt="Image"
+                class="imf-fluid"
+              />
+            </ItemService>
+            <ItemService
+              title="24/7 Support"
+              description="Kami menggunakan mesin dan bahan dengan kualitas terbaik untuk
+                  menjamin kualitas produk dan kepuasan pelanggan."
+            >
+              <img
+                src="@/assets/images/support.svg"
+                alt="Image"
+                class="imf-fluid"
+              />
+            </ItemService>
+            <ItemService
+              title="Hassle Free Returns"
+              description="Jika ada hal yang belum jelas baik untuk masalah produk,
                   pembelian, ataupun bisnis, konsultasikan apa yang belum anda
-                  pahami kepada kami. Tim kami siap membantu anda.
-                </p>
-              </div>
-            </div>
+                  pahami kepada kami. Tim kami siap membantu anda."
+            >
+              <img
+                src="@/assets/images/return.svg"
+                alt="Image"
+                class="imf-fluid"
+              />
+            </ItemService>
           </div>
         </div>
 

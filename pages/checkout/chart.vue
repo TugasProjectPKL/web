@@ -57,7 +57,11 @@ onMounted(() => {
                       console.log('ss');
                     }
                   "
-                  @min="() => {}"
+                  @min="
+                    () => {
+                      console.log('ss');
+                    }
+                  "
                 />
                 <tr v-if="product.dataProductCart.length < 1">
                   <td></td>
