@@ -1,13 +1,5 @@
 <script setup lang="ts">
-import { type Database } from "../../database.types";
-const supabase = useSupabaseClient<Database>();
-
-const login = await supabase.auth.signInWithPassword({
-  email: "",
-  password: "",
-});
-
-supabase;
+const auth = useAuth();
 </script>
 <template>
   <div id="main-wrapper" class="container">
@@ -26,34 +18,36 @@ supabase;
                   <p class="text-muted mt-2 mb-5">
                     Enter your email address and password to access admin panel.
                   </p>
-
-                  <form>
-                    <div class="form-group">
-                      <label for="exampleInputFullName">Full Name</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="exampleInputFullName"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="exampleInputEmail1"
-                      />
-                    </div>
-                    <div class="form-group mb-5">
-                      <label for="exampleInputPassword1">Password</label>
-                      <input
-                        type="password"
-                        class="form-control"
-                        id="exampleInputPassword1"
-                      />
-                    </div>
-                    <button type="submit" class="btn btn-theme">Login</button>
-                  </form>
+                  <div class="form-group">
+                    <label for="exampleInputFullName">Full Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputFullName"
+                      v-model="auth.fullName"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      v-model="auth.email"
+                    />
+                  </div>
+                  <div class="form-group mb-5">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                      v-model="auth.password"
+                    />
+                  </div>
+                  <button @click="auth.signUpWithEmail" class="btn btn-theme">
+                    Daftar
+                  </button>
                 </div>
               </div>
 

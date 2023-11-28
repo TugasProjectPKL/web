@@ -9,7 +9,7 @@ export const useProduct = defineStore("product", {
     async getListProductDashboard() {
       const supabase = useSupabaseClient<Database>();
 
-      const data = await supabase.from("tb_product").select().limit(2);
+      const data = await supabase.from("tb_product").select().limit(3);
 
       if (data.error) {
         this.dataProductDashboard = [];
@@ -44,7 +44,7 @@ export const useProduct = defineStore("product", {
         }
 
         if(data.data){
-            console.log('getListProduct',data)
+           
             this.dataProductCart = data.data
         }
     },

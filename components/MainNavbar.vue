@@ -1,3 +1,14 @@
+<script setup>
+const user = useSupabaseUser();
+const router = useRouter();
+function profile() {
+  if (user.value) {
+    router.push({ path: "/profile" });
+  } else {
+    router.push({ path: "/auth/login" });
+  }
+}
+</script>
 <template>
   <nav
     class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark"
@@ -40,9 +51,9 @@
 
         <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
           <li>
-            <NuxtLink class="nav-link" to="/profile">
+            <a class="nav-link" @click="profile">
               <img src="@/assets/images/user.svg" />
-            </NuxtLink>
+            </a>
           </li>
           <li>
             <NuxtLink class="nav-link" to="/checkout/chart">

@@ -19,30 +19,30 @@ const auth = useAuth();
                     Enter your email address and password to access admin panel.
                   </p>
 
-                  <form>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="exampleInputEmail1"
-                        v-model="auth.email"
-                      />
-                    </div>
-                    <div class="form-group mb-5">
-                      <label for="exampleInputPassword1">Password</label>
-                      <input
-                        type="password"
-                        class="form-control"
-                        id="exampleInputPassword1"
-                        v-model="auth.password"
-                      />
-                    </div>
-                    <button type="submit" class="btn btn-theme">Login</button>
-                    <a href="#l" class="forgot-link float-right text-primary"
-                      >Forgot password?</a
-                    >
-                  </form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      v-model="auth.email"
+                    />
+                  </div>
+                  <div class="form-group mb-5">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                      v-model="auth.password"
+                    />
+                  </div>
+                  <button @click="auth.signInWithEmail" class="btn btn-theme">
+                    Login
+                  </button>
+                  <a href="#l" class="forgot-link float-right text-primary"
+                    >Forgot password?</a
+                  >
                 </div>
               </div>
 
