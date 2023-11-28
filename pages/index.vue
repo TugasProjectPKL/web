@@ -1,16 +1,10 @@
 <script setup lang="ts">
-import { type Database } from "../database.types";
 definePageMeta({
   layout: "dashboard",
 });
-const router = useRouter();
-const supabase = useSupabaseClient<Database>();
-const { data: products } = await useAsyncData("product", async () => {
-  let { data: tb_product, error } = await supabase
-    .from("tb_product")
-    .select("*")
-    .limit(3);
-  return tb_product;
+const product = useProduct();
+onMounted(() => {
+  product.getListProductDashboard();
 });
 </script>
 
@@ -70,7 +64,7 @@ const { data: products } = await useAsyncData("product", async () => {
 
         <!-- Start Column 4 -->
         <ItemProductHome
-          v-for="item in products"
+          v-for="item in product.dataProductDashboard"
           :image="item.product_image ?? ''"
           :name="item.product_name ?? ''"
           :price="item.product_price ?? 0"

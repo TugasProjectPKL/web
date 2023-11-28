@@ -16,6 +16,7 @@ export interface Database {
           product_id: number
           quantity: number | null
           update_at: string | null
+          user_id: string | null
         }
         Insert: {
           created_at?: string
@@ -23,6 +24,7 @@ export interface Database {
           product_id: number
           quantity?: number | null
           update_at?: string | null
+          user_id?: string | null
         }
         Update: {
           created_at?: string
@@ -30,6 +32,7 @@ export interface Database {
           product_id?: number
           quantity?: number | null
           update_at?: string | null
+          user_id?: string | null
         }
         Relationships: [
           {
