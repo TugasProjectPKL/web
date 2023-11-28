@@ -1,10 +1,21 @@
 import { type Database } from "~/database.types";
 
 export const useProduct = defineStore("product", {
-  state: () => ({
-    dataProductDashboard: Array<any>(),
-    dataProductCart:Array<Chart>()
+  state: (): {
+    dataProductDashboard: Array<any>;
+    dataProductCart: Array<Chart>;
+  } => ({
+    dataProductDashboard: [],
+    dataProductCart: [],
   }),
+  getters: {
+    getTotal: ({ dataProductCart }) => {
+      if (dataProductCart.length < 1) return 0;
+      return dataProductCart
+        .map((value: Chart) => value.quantity * value.tb_product.product_price)
+        .reduce((acc, current) => acc + current);
+    },
+  },
   actions: {
     async getListProductDashboard() {
       const supabase = useSupabaseClient<Database>();
@@ -20,8 +31,14 @@ export const useProduct = defineStore("product", {
     },
     async getListProductChart() {
       const supaase = useSupabaseClient<Database>();
+      const session = useSupabaseUser();
 
-      const data = await supaase.from("tb_cart").select(`
+      console.log(session.value);
+
+      const data = await supaase
+        .from("tb_cart")
+        .select(
+          `
             id,
             user_id,
             quantity,
@@ -37,21 +54,21 @@ export const useProduct = defineStore("product", {
                 created_at,
                 updated_at
             )
-        `);
+        `
+        )
+        .eq("user_id", session.value?.id ?? "");
 
-        if(data.error){
-            //todo error
-        }
+      if (data.error) {
+        //todo error
+      }
 
-        if(data.data){
-           
-            this.dataProductCart = data.data
-        }
+      if (data.data) {
+        this.dataProductCart = data.data;
+      }
     },
-    async getDetailCheckout(){
-        const supabase = useSupabaseClient<Database>()
-        const data = await supabase.from('tb_cart')
-        .select(`
+    async getDetailCheckout() {
+      const supabase = useSupabaseClient<Database>();
+      const data = await supabase.from("tb_cart").select(`
         id,
         user_id,
         quantity,
@@ -67,36 +84,31 @@ export const useProduct = defineStore("product", {
             created_at,
             updated_at
         )
-        `)
+        `);
 
-        if(data.error){
+      if (data.error) {
+      }
 
-        }
-
-        if(data.data){
-
-        }
+      if (data.data) {
+      }
     },
-    async insertProductToCart(){
-        const supabase = useSupabaseClient<Database>()
+    async insertProductToCart() {
+      const supabase = useSupabaseClient<Database>();
 
-        const result = await supabase.from("tb_cart")
-        .insert({
-            id:0,
-            created_at:"",
-            update_at:"",
-            product_id:0,
-            quantity:0,
-            user_id:""
-        })
+      const result = await supabase.from("tb_cart").insert({
+        id: 0,
+        created_at: "",
+        update_at: "",
+        product_id: 0,
+        quantity: 0,
+        user_id: "",
+      });
 
-        if(result.error){
+      if (result.error) {
+      }
 
-        }
-
-        if(result.data){
-
-        }
-    }
+      if (result.data) {
+      }
+    },
   },
 });

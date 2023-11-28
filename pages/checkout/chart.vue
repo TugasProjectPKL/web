@@ -46,8 +46,9 @@ onMounted(() => {
               </thead>
               <tbody>
                 <ItemProductChart
+                  v-if="product.dataProductCart.length > 0"
                   v-for="item in product.dataProductCart"
-                  :product-image="item.tb_product.product_image"
+                  :product-image="item.tb_product.product_image ?? ''"
                   :product-name="item.tb_product.product_name"
                   :product-price="item.tb_product.product_price"
                   :product-quantity="item.quantity"
@@ -58,6 +59,14 @@ onMounted(() => {
                   "
                   @min="() => {}"
                 />
+                <tr v-if="product.dataProductCart.length < 1">
+                  <td></td>
+                  <td></td>
+                  <td>Belum ada produk</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -84,7 +93,7 @@ onMounted(() => {
                   <span class="text-black">Subtotal</span>
                 </div>
                 <div class="col-md-6 text-right">
-                  <strong class="text-black">$230.00</strong>
+                  <strong class="text-black">Rp.{{ product.getTotal }}</strong>
                 </div>
               </div>
               <div class="row mb-5">
@@ -92,7 +101,7 @@ onMounted(() => {
                   <span class="text-black">Total</span>
                 </div>
                 <div class="col-md-6 text-right">
-                  <strong class="text-black">$230.00</strong>
+                  <strong class="text-black">Rp.{{ product.getTotal }}</strong>
                 </div>
               </div>
 
