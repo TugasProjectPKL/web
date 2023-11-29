@@ -68,6 +68,11 @@ onMounted(() => {
           :image="item.product_image ?? ''"
           :name="item.product_name ?? ''"
           :price="item.product_price ?? 0"
+          @add="
+            () => {
+              product.insertProductToCart(item.id);
+            }
+          "
         />
         <!-- End Column 4 -->
       </div>

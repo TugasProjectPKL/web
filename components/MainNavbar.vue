@@ -15,8 +15,8 @@ function profile() {
     arial-label="Furni navigation bar"
   >
     <div class="container">
-      <a class="navbar-brand" href="index.html"
-        >PT. Starindo Multi Industri<span>.</span></a
+      <NuxtLink class="navbar-brand" to="/"
+        >PT. Starindo Multi Industri<span>.</span></NuxtLink
       >
 
       <button
@@ -37,15 +37,15 @@ function profile() {
             <NuxtLink class="nav-link" to="/">Home</NuxtLink>
           </li>
           <li>
-            <NuxtLink class="nav-link" to="/checkout/chart">Shop</NuxtLink>
+            <NuxtLink class="nav-link" to="/">Shop</NuxtLink>
           </li>
           <li>
-            <NuxtLink class="nav-link" to="/checkout/chart"
+            <NuxtLink class="nav-link" to="/customerservice/cs"
               >Customer Service</NuxtLink
             >
           </li>
           <li>
-            <NuxtLink class="nav-link" to="/checkout/chart">About us</NuxtLink>
+            <NuxtLink class="nav-link" to="/about">About us</NuxtLink>
           </li>
         </ul>
 

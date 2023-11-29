@@ -31,7 +31,7 @@ onMounted(() => {
   <div class="untree_co-section before-footer-section">
     <div class="container">
       <div class="row mb-5">
-        <form class="col-md-12" method="post">
+        <div class="col-md-12">
           <div class="site-blocks-table">
             <table class="table">
               <thead>
@@ -54,12 +54,18 @@ onMounted(() => {
                   :product-quantity="item.quantity"
                   @add="
                     () => {
-                      console.log('ss');
+                      product.updateQuantity(item.id, item.quantity, true);
                     }
                   "
                   @min="
                     () => {
-                      console.log('ss');
+                      product.updateQuantity(item.id, item.quantity, false);
+                    }
+                  "
+                  @insert="
+                    (value:number) => {
+                      console.log('s',value)
+                      product.insertQuantity(item.id, value);
                     }
                   "
                 />
@@ -74,7 +80,7 @@ onMounted(() => {
               </tbody>
             </table>
           </div>
-        </form>
+        </div>
       </div>
 
       <div class="row">

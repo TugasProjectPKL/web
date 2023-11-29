@@ -1,5 +1,6 @@
 <script setup lang="ts">
-defineProps({
+import { useToast } from "vue-toastification";
+const props = defineProps({
   productImage: {
     type: String,
   },
@@ -13,8 +14,18 @@ defineProps({
     type: Number,
   },
 });
+const emit = defineEmits(["add", "min", "insert"]);
 
-defineEmits(["add", "min"]);
+const toast = useToast();
+
+function insert(value: any) {
+  if ((value.target.value as number) == 0) {
+    toast.error("Kuantitas tidak boleh dibawah 1");
+    return;
+  }
+
+  emit("insert", Number.parseInt(value.target.value));
+}
 </script>
 <template>
   <tr>
@@ -32,7 +43,7 @@ defineEmits(["add", "min"]);
       >
         <div class="input-group-prepend">
           <button
-            @click="$emit('add')"
+            @click="$emit('min')"
             class="btn btn-outline-black decrease"
             type="button"
           >
@@ -40,16 +51,16 @@ defineEmits(["add", "min"]);
           </button>
         </div>
         <input
-          type="text"
+          type="number"
           class="form-control text-center quantity-amount"
           :value="productQuantity ?? 0"
-          placeholder=""
+          v-on:change="insert"
           aria-label="Example text with button addon"
           aria-describedby="button-addon1"
         />
         <div class="input-group-append">
           <button
-            @click="$emit('min')"
+            @click="$emit('add')"
             class="btn btn-outline-black increase"
             type="button"
           >
@@ -66,4 +77,17 @@ defineEmits(["add", "min"]);
 @import url("@/assets/css/bootstrap.min.css");
 @import url("@/assets/css/style.css");
 @import url("@/assets/css/tiny-slider.css");
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: none;
+}
 </style>
