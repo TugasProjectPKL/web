@@ -37,7 +37,7 @@ function profile() {
             <NuxtLink class="nav-link" to="/">Home</NuxtLink>
           </li>
           <li>
-            <NuxtLink class="nav-link" to="/">Shop</NuxtLink>
+            <NuxtLink class="nav-link" to="/shop/shop">Shop</NuxtLink>
           </li>
           <li>
             <NuxtLink class="nav-link" to="/customerservice/cs"
