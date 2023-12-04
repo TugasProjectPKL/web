@@ -3,6 +3,7 @@ definePageMeta({
   layout: "dashboard",
 });
 const product = useProduct();
+const router = useRouter();
 onMounted(() => {
   product.getListProductChart();
 });
@@ -119,7 +120,11 @@ onMounted(() => {
                 <div class="col-md-12">
                   <button
                     class="btn btn-black btn-lg py-3 btn-block"
-                    onclick="window.location='checkout.html'"
+                    @click="
+                      () => {
+                        router.push('/checkout/checkout');
+                      }
+                    "
                   >
                     Proceed To Checkout
                   </button>

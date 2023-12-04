@@ -1,0 +1,4 @@
+<template>
+  <MainNavbar />
+  <MainFooter />
+</template>

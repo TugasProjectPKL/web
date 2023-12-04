@@ -32,6 +32,18 @@ export const useProduct = defineStore("product", {
         this.dataProductDashboard = data.data!;
       }
     },
+    async getListProductShop() {
+      const supabase = useSupabaseClient<Database>();
+
+      const data = await supabase.from("tb_product").select();
+
+      if (data.error) {
+        this.dataProductShop = [];
+      }
+      if (data != null) {
+        this.dataProductShop = data.data!;
+      }
+    },
     async getListProductChart() {
       const supaase = useSupabaseClient<Database>();
       const session = useSupabaseUser();
@@ -121,6 +133,7 @@ export const useProduct = defineStore("product", {
       }
 
       toast.success("Berhasil menambah item");
+      this.getListProductChart();
     },
     async deleteProductCart(cartId: number) {
       const supabase = useSupabaseClient<Database>();
@@ -132,6 +145,7 @@ export const useProduct = defineStore("product", {
         return;
       }
       toast.success("Berhasil menghapus item");
+      this.getListProductChart();
     },
     async insertQuantity(cartId: number, qty: number) {
       const supabase = useSupabaseClient<Database>();
@@ -168,6 +182,7 @@ export const useProduct = defineStore("product", {
           }
 
           toast.error("Berhasil menghapus produk");
+          this.getListProductChart();
           return;
         }
       }
