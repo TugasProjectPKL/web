@@ -23,6 +23,29 @@
      </div>
   </div>
   <br/>
+  <div class="row">
+		        <div class="col-md-6 mb-5 mb-md-0">
+              <div style="text-align: center;">
+		          <h2 class="h3 mb-3 text-black">VISI</h2>
+            </div> 
+		          <div class="p-3 p-lg-5 border bg-white">
+                Menjadi perusahaan pita perekat terbaik dan pilihan utama masyarakat.
+              </div>
+              </div>
+		        <div class="col-md-6">
+		          <div class="row mb-5">
+		            <div class="col-md-12">
+                  <div style="text-align: center;">
+		              <h2 class="h3 mb-3 text-black">MISI</h2>
+                  </div>
+		              <div class="p-3 p-lg-5 border bg-white">
+                    Menjaga hubungan baik dengan seluruh pihak adalah salah satu prinsip yang selalu kami terapkan. Dengan pengalaman, fasilitas, serta sumber daya yang kami miliki, kami akan terus berupaya untuk menekuni keahlian kami serta mengambil pelajaran dari berbagai pengalaman yang didapat sepanjang perjalanan karir kami, dan akan terus melakukan inovasi-inovasi untuk memenuhi kebutuhan anda.
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		      <!-- </form> -->
   <MainFooter>
   <div class="sofa-img">
         <img src="@/assets/images/people.png" alt="Image" class="img-fluid" />

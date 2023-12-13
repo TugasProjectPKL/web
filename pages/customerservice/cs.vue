@@ -7,22 +7,14 @@ const route = useRouter();
 
 <template>
   <!-- Start Header/Navigation -->
-  <MainNavbar />
   <!-- End Header/Navigation -->
-
+  <MainNavbar />
   <!-- Start Hero Section -->
   <div class="hero">
     <div class="container">
       <div class="row justify-content-between">
         <div class="col-lg-5">
           <div class="intro-excerpt">
-<<<<<<< HEAD
-            <div class="text-end">
-              
-            </div>
-=======
-           
->>>>>>> 1a18a3371ac4f418168a14e2875c12239700e1d1
             <h1>Customer Service</h1>
           </div>
         </div>
