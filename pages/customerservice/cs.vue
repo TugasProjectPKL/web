@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const feedback = useFeedback();
 definePageMeta({
   layout: "dashboard",
 });
@@ -40,6 +41,7 @@ const route = useRouter();
                   class="form-control"
                   id="c_fname"
                   name="c_fname"
+                  v-model="feedback.firtName"
                 />
               </div>
               <div class="col-md-6">
@@ -51,6 +53,7 @@ const route = useRouter();
                   class="form-control"
                   id="c_lname"
                   name="c_lname"
+                  v-model="feedback.lastName"
                 />
               </div>
             </div>
@@ -66,6 +69,7 @@ const route = useRouter();
                   id="c_address"
                   name="c_address"
                   placeholder="Hanya Angka"
+                  v-model="feedback.invoiceNumber"
                 />
               </div>
             </div>
@@ -80,6 +84,7 @@ const route = useRouter();
                   class="form-control"
                   id="c_email_address"
                   name="c_email_address"
+                  v-model="feedback.email"
                 />
               </div>
               <div class="col-md-6">
@@ -92,130 +97,8 @@ const route = useRouter();
                   id="c_phone"
                   name="c_phone"
                   placeholder="Nomor HP"
+                  v-model="feedback.phone"
                 />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <div class="collapse" id="ship_different_address">
-                <div class="py-2">
-                  <div class="form-group">
-                    <label for="c_diff_country" class="text-black"
-                      >Country <span class="text-danger">*</span></label
-                    >
-                    <select id="c_diff_country" class="form-control">
-                      <option value="1">Select a country</option>
-                      <option value="2">bangladesh</option>
-                      <option value="3">Algeria</option>
-                      <option value="4">Afghanistan</option>
-                      <option value="5">Ghana</option>
-                      <option value="6">Albania</option>
-                      <option value="7">Bahrain</option>
-                      <option value="8">Colombia</option>
-                      <option value="9">Dominican Republic</option>
-                    </select>
-                  </div>
-
-                  <div class="form-group row">
-                    <div class="col-md-6">
-                      <label for="c_diff_fname" class="text-black"
-                        >First Name <span class="text-danger">*</span></label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="c_diff_fname"
-                        name="c_diff_fname"
-                      />
-                    </div>
-                    <div class="col-md-6">
-                      <label for="c_diff_lname" class="text-black"
-                        >Last Name <span class="text-danger">*</span></label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="c_diff_lname"
-                        name="c_diff_lname"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="form-group row mb-3">
-                    <div class="col-md-12">
-                      <label for="c_diff_address" class="text-black"
-                        >Address <span class="text-danger">*</span></label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="c_diff_address"
-                        name="c_diff_address"
-                        placeholder="Street address"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Apartment, suite, unit etc. (optional)"
-                    />
-                  </div>
-
-                  <div class="form-group row">
-                    <div class="col-md-6">
-                      <label for="c_diff_state_country" class="text-black"
-                        >State / Country
-                        <span class="text-danger">*</span></label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="c_diff_state_country"
-                        name="c_diff_state_country"
-                      />
-                    </div>
-                    <div class="col-md-6">
-                      <label for="c_diff_postal_zip" class="text-black"
-                        >Posta / Zip <span class="text-danger">*</span></label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="c_diff_postal_zip"
-                        name="c_diff_postal_zip"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="form-group row mb-5">
-                    <div class="col-md-6">
-                      <label for="c_diff_email_address" class="text-black"
-                        >Email Address <span class="text-danger">*</span></label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="c_diff_email_address"
-                        name="c_diff_email_address"
-                      />
-                    </div>
-                    <div class="col-md-6">
-                      <label for="c_diff_phone" class="text-black"
-                        >Phone <span class="text-danger">*</span></label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="c_diff_phone"
-                        name="c_diff_phone"
-                        placeholder="Phone Number"
-                      />
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -230,13 +113,14 @@ const route = useRouter();
                 rows="5"
                 class="form-control"
                 placeholder="Tulis Catatan anda disini..."
+                v-model="feedback.note"
               ></textarea>
             </div>
             <br />
             <div class="form-group">
               <button
                 class="btn btn-black btn-lg py-3 btn-block"
-                onclick="window.location='thankyou.html'"
+                @click="feedback.insertFeedback"
               >
                 Submit
               </button>

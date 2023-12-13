@@ -69,6 +69,11 @@ onMounted(() => {
                       product.insertQuantity(item.id, value);
                     }
                   "
+                  @delete="
+                    () => {
+                      product.deleteProductCart(item.tb_product.id);
+                    }
+                  "
                 />
                 <tr v-if="product.dataProductCart.length < 1">
                   <td></td>

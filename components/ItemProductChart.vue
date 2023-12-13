@@ -14,16 +14,19 @@ const props = defineProps({
     type: Number,
   },
 });
-const emit = defineEmits(["add", "min", "insert"]);
+const emit = defineEmits(["add", "min", "insert", "delete"]);
 
 const toast = useToast();
+
+function remove() {
+  emit("delete", {});
+}
 
 function insert(value: any) {
   if ((value.target.value as number) == 0) {
     toast.error("Kuantitas tidak boleh dibawah 1");
     return;
   }
-
   emit("insert", Number.parseInt(value.target.value));
 }
 </script>
@@ -70,7 +73,7 @@ function insert(value: any) {
       </div>
     </td>
     <td>Rp.{{ (productPrice ?? 0) * (productQuantity ?? 0) }}</td>
-    <td><a href="#" class="btn btn-black btn-sm">X</a></td>
+    <td><a @click="remove" class="btn btn-black btn-sm">X</a></td>
   </tr>
 </template>
 <style scoped>
