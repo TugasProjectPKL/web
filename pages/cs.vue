@@ -16,14 +16,7 @@ const route = useRouter();
       <div class="row justify-content-between">
         <div class="col-lg-5">
           <div class="intro-excerpt">
-            <div class="text-end">
-              <!-- Mengatur ke pojok kanan atas -->
-              <nuxt-link to="/" class="btn btn-white mb-1">
-                <!-- Tautan kembali ke halaman utama -->
-                <i class="fa fa-home"></i>
-                <!-- Ikon home -->
-              </nuxt-link>
-            </div>
+           
             <h1>Customer Service</h1>
           </div>
         </div>
